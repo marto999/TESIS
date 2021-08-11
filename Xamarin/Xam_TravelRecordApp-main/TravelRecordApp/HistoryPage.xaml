@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TravelRecordApp.HistoryPage">
+    <ListView x:Name="postListView"
+              VerticalOptions="FillAndExpand"
+              HorizontalOptions="FillAndExpand">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell
+                     >
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto*3" />
+                            
+                            
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="2*" />
+                            <RowDefinition Height="3*" />
+                            
+                        </Grid.RowDefinitions>
+
+                        <Label Text="{Binding Experience}"
+                               Grid.Column="1"/>
+                        <Button x:Name="edit" Text="Edit"
+                                Grid.Column="2"
+                                ></Button>
+                        <Button x:Name="delete" 
+                                Text="Delete"
+                                Clicked="Delete_Clicked"
+                                Grid.Column="3"
+                                ></Button>
+                        
+
+
+
+
+                    </Grid>
+                </ViewCell>
+
+
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>
